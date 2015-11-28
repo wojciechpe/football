@@ -1,0 +1,19 @@
+<div ng-repeat="(key, value) in group.games | groupBy: 'roundNumber'" class="round-edit">
+  <div style="text-align: center;">Runda {{ key }}:</div>
+  <table class="round-edit">
+    <tr ng-repeat="game in value">
+        <td class="game-edit-team1 {{g | gameClass: game.team1Goals: game.team2Goals}}">
+<!--          <strong ng-show="team == game.team1" ng-repeat="team in group.teams | orderBy:['-points', '-(goalsWon-goalsLost)','-goalsWon', 'goalsLost', 'gamesNumber'] ">{{$index + 1}}.</strong>-->
+          {{game.team1.name}} ({{game.team1.points}}p)
+        </td>
+        <td><img width="30" ng-src="http://futbolkobiet.pl/application/views/img/flagi/{{game.team1.name | lowercase}}_thumb.png" /></td>
+        <td><input style="width: 30px;" type="number" min="0" ng-model="game.team1Goals" ng-change="group.updateRanking()"></td>
+        <td><input style="width: 30px;"  type="number" min="0" ng-model="game.team2Goals" ng-change="group.updateRanking()"></td>
+        <td><img width="30" ng-src="http://futbolkobiet.pl/application/views/img/flagi/{{game.team2.name | lowercase}}_thumb.png" /></td>
+        <td class="{{g | gameClass: game.team2Goals: game.team1Goals}}"> 
+<!--          <strong ng-show="team == game.team2" ng-repeat="team in group.teams | orderBy:['-points', '-(goalsWon-goalsLost)','-goalsWon', 'goalsLost', 'gamesNumber'] ">{{$index + 1}}.</strong>-->
+          {{game.team2.name}} ({{game.team2.points}}p)
+        </td>
+    </tr>
+  </table>
+</div>

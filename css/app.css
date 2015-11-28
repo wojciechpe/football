@@ -1,0 +1,28 @@
+/* app css stylesheet */
+
+body {
+  font-size: 11px;
+}
+
+.table {
+  margin-bottom: 0;  
+}
+
+.navbar {
+  min-height: inherit;  
+}
+
+.table tbody tr th,
+.table tbody tr td {
+  padding: 0;
+}
+
+.round-edit {
+  display: inline-block;
+  margin: 3px;
+  background: #f3f3f3;
+}
+
+.game-edit-team1 {
+  text-align: right;
+}

@@ -1,0 +1,17 @@
+<div ng-controller="SportCtrl">
+  <select ng-model="tournament.sport" ng-change="tournament.updateRanking()">
+    <option value="football">Piłka nożna</option>
+    <option value="volleyball">Siatkówka</option>
+  </select>
+  <select ng-model="tournament.mode">
+    <option value="one-game">1 mecz</option>
+    <option value="two-games">Mecz i rewanż</option>
+  </select>
+  <select ng-model="tournament.init_group_title">
+    <option ng-repeat="init_group in tournament.loaded_data" value="{{init_group.group_title}}">{{init_group.group_title}}</option>
+  </select>
+  <button class="btn btn-default btn-success" ng-click="tournament.addGroup()">Dodaj grupę</button>
+  <div ng-repeat="group in tournament.groups">
+    <group-view group="group" tournament="tournament" style="border: 1px solid red; margin: 10px; display: block;"></group-view>
+  </div>
+</div>

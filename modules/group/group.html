@@ -1,0 +1,7 @@
+<button ng-click="tournament.removeGroup(group)">Usuń grupę</button>
+<ng-include src="'modules/group/group-ranking.html'"></ng-include> 
+<form ng-submit="group.addTeam(teamName); teamName = null;">
+   <input type="text" ng-model="teamName" autofocus>
+   <button type="submit">Dodaj drużynę</button>
+</form>
+<ng-include src="'modules/game/games.html'"></ng-include> 

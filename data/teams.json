@@ -1,0 +1,54 @@
+[
+  {
+    "group_title": "4 x puste",
+    "teams": [
+      {"name": ""}, 
+      {"name": ""}, 
+      {"name": ""}, 
+      {"name": ""}
+    ]
+  },
+  {
+    "group_title": "Ameryka Południowa",
+    "teams": [
+      {"name": "Brazylia"}, 
+      {"name": "Argentyna"}, 
+      {"name": "Kolumbia"}, 
+      {"name": "Ekwador"}, 
+      {"name": "Wenezuela"}, 
+      {"name": "Peru"}, 
+      {"name": "Chile"}, 
+      {"name": "Boliwia"}, 
+      {"name": "Paragwaj"}, 
+      {"name": "Urugwaj"}
+    ]
+  },
+  {
+    "group_title": "Polska el. MŚ 2018",
+    "teams": [
+      {"name": "Rumunia"}, 
+      {"name": "Dania"}, 
+      {"name": "Polska"}, 
+      {"name": "Czarnogora"}, 
+      {"name": "Armenia"}, 
+      {"name": "Kazachstan"}
+    ]
+  },
+  {
+    "group_title": "Siatkarskie potęgi",
+    "teams": [
+      {"name": "Polska"}, 
+      {"name": "Brazylia"}, 
+      {"name": "Rosja"}, 
+      {"name": "Stany_Zjednoczone"}, 
+      {"name": "Serbia"}, 
+      {"name": "Bulgaria"}, 
+      {"name": "Iran"}, 
+      {"name": "Kuba"}, 
+      {"name": "Argentyna"}, 
+      {"name": "Wlochy"}, 
+      {"name": "Niemcy"}, 
+      {"name": "Francja"}
+    ]
+  }
+]

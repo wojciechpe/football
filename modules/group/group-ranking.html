@@ -1,0 +1,31 @@
+<div class="navbar navbar-default">
+  <table class="table table-bordered">
+    <tr>
+      <th></th>
+      <th>Miejsce</th>
+      <th>Drużyna</th>
+      <th></th>
+      <th>Mecze</th>
+      <th>Punkty</th>
+      <th ng-show="group.sport == 'football'">Bramki</th>
+      <th ng-show="group.sport == 'volleyball'">Sety</th>
+      <th>Z</th>
+      <th ng-show="group.sport == 'football'">R</th>
+      <th>P</th>
+      <th ng-repeat="team in group.teams | orderBy:['-points', '-(goalsWon-goalsLost)','-goalsWon', 'goalsLost', 'gamesNumber']">{{team.name}}</th>
+    </tr>
+    <tr ng-repeat="team in group.teams | orderBy:['-points', '-(goalsWon-goalsLost)','-goalsWon', 'goalsLost', 'gamesNumber']">
+      <td ng-click="group.removeTeam(team)" class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></td>
+      <td>{{$index + 1}}</td>
+      <td><input ng-model="team.name"></td>
+      <td><img width="30" ng-src="http://futbolkobiet.pl/application/views/img/flagi/{{team.name | lowercase}}_thumb.png" /></td>
+      <td>{{team.gamesNumber}}</td>
+      <td>{{team.points}}</td>
+      <td>{{team.goalsWon}}-{{team.goalsLost}}</td>
+      <td>{{team.wins}}</td>
+      <td ng-show="group.sport == 'football'">{{team.draws}}</td>
+      <td>{{team.losses}}</td>
+      <td class="{{r | showResultClass: team:team2:group}}" ng-repeat="team2 in group.teams | orderBy:['-points', '-(goalsWon-goalsLost)','-goalsWon', 'goalsLost', 'gamesNumber']">{{r | showResult: team:team2:group}}</td>
+    </tr>
+  </table>
+</div>
